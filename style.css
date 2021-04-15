@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-cyan: hsl(184, 100%, 22%);
+    --primary-dark-cyan: hsl(179, 100%, 13%);
+
+    --white: hsla(0, 0%, 100%, 0.75);
+    --grey: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+    
+    background: var(--grey);
+}
+
+h1 {
+    font-family: "Big Shoulders Display", cursive;
+    color: var(--grey);
+    font-size: 45px;
+}
+
+p {
+    color: var(--white);
+    padding: 40px 0px;
+}
+
+img {
+    width: 70px;
+    padding-bottom: 40px;
+}
+
+button {
+    background: var(--grey);
+    border: 2px var(--grey) solid;
+    border-radius: 50px;
+    padding: 15px 40px;
+    transition: background 0.2s;
+    position: absolute;
+    bottom: 80px;
+}
+
+.sedans button {
+    color: var(--primary-orange);
+}
+
+.suvs button {
+    color: var(--primary-cyan);
+}
+
+.luxury button {
+    color: var(--primary-dark-cyan);
+}
+
+button:hover {
+    background: none;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.main-container {
+    margin: auto;
+    width: 900px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: width 0.2s;
+}
+
+.car-container {
+    height: 500px;
+    padding: 40px;
+    line-height: 28px;
+    position:relative;
+}
+
+.sedans {
+    background: var(--primary-orange);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.suvs {
+    background: var(--primary-cyan);
+}
+
+.luxury {
+    background: var(--primary-dark-cyan);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    padding-bottom: 40px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 950px) {
+    .main-container {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main-container {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        padding: 50px 0px;
+    }
+
+    .sedans {
+        background: var(--primary-orange);
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .luxury {
+        background: var(--primary-dark-cyan);
+        border-radius: 0px 0px 10px 10px;
+    }
+    .car-container {
+        height: 450px;
+    }
+}
